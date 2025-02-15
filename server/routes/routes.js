@@ -31,6 +31,7 @@ router.delete('/timesheet/:id', timesheetController.deleteTimesheet);
 
 // project routes
 router.post('/project', projectController.createProject);
+router.post('/project/details', projectController.saveProjectDetails);
 router.get('/projects', projectController.getAllProjects);
 router.get('/project/:id', projectController.getProjectById);
 router.put('/project/:id', projectController.updateProject);

@@ -8,6 +8,7 @@ const timesheetController = require('../controllers/timesheetController');
 const router = express.Router();
 
 // User routes
+router.post('/login', userController.loginUser);
 router.post('/users', userController.createUser);
 router.get('/users', userController.getAllUsers);
 router.get('/users/:id', userController.getUserById);

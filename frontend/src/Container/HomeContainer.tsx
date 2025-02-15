@@ -2,6 +2,7 @@ import React, { ReactElement, useState, useEffect  } from 'react'
 import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
+import Timesheet from './TimesheetContainer';
 
 
 const { Header, Content, Footer } = Layout;
@@ -32,9 +33,10 @@ const Home: React.FC = () => {
                <Breadcrumb.Item>App</Breadcrumb.Item>
              </Breadcrumb>
              <Outlet />
+             <Timesheet/>
            </Content>
            <Footer style={{ textAlign: 'center' }}>
-             Ant Design ©{new Date().getFullYear()} Created by Ant UED
+             Alibaba Ant Design ©{new Date().getFullYear()} Created by Ant UED
            </Footer>
          </Layout>
       ) : (

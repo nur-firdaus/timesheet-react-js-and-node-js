@@ -29,18 +29,6 @@ const NavBar: React.FC = () => {
     realtime==true?navigate('list-realtime'):navigate('list-batch')
   };
 
-  const realtimeChange = () => {
-    if(realtime==true){
-      setRealtime(false)
-      localStorage.setItem("realtime", "0");
-      navigate('list-batch')
-    }else{
-      setRealtime(true)
-      localStorage.setItem("realtime", "1");
-      navigate('list-realtime')
-    }
-  };
-
 
   return (
     <>
@@ -61,9 +49,6 @@ const NavBar: React.FC = () => {
             <Button type="primary" onClick={handleLogout}>
               Logout
             </Button>
-          </Menu.Item>
-          <Menu.Item>
-            Batch <Switch checked={realtime} onChange={realtimeChange} /> Real-time 
           </Menu.Item>
         </Menu>
       ) : (
